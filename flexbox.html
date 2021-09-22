@@ -40,6 +40,35 @@
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .el {
+        /* DEFAULT */
+        /* flex-grow: 0; */ /*fle-grow faz com que cada elemento cresca o suficiente para ocupar o espaco necessario dentro do container ate que todo o container esteja preenchido. Se escolhermos somente 1 elemento, somente aquele elemento crescera. */
+        /* flex-shrink: 1; */
+        /* flex-basis: auto; */
+
+        /*flex-basis: 200px;*/ /* esta propriedade  diz que o tamanho do objeto pode ser de ate 200px caso haja espaco no container. Mas para isso o flex-shirink deve ser 1*/
+        /*flex-shrink: 1; */ /*Quando passamos o flex-shirink para 0 o tamanho que for definido para o flex-basis sera respeitado. */
+
+        flex: 0 1 auto; /* flex funciona como margin: grow, shirink, basis*/
+      }
+
+      .el--1 {
+        align-self: flex-start;
+      }
+
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>
